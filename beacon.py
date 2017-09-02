@@ -30,7 +30,7 @@ def sniffmgmt(p):
         except Exception as e:
             logger.debug("No RSSI found")
 
-        recipient_from_packet, sender_from_packet, txpower_from_packet, rssi_from_packet, seqnum_from_packet = decode_request(data)
+        recipient_from_packet, sender_from_packet, txpower_from_packet, rssi_from_packet, seqnum_from_packet = commonfunctions.decode_packet(data)
                      
         if recipient_from_packet != my_callsign:
             logger.debug("Beacon received but it wasn't for me, not responding")
