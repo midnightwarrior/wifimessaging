@@ -25,7 +25,6 @@ def send_packet(recipient='', sender='', rssi=0, txpower=0, seqnum=0, rs=None,
 def decode_packet(undecoded=None, rs=None):
     
     data = rs.decode(undecoded)
-    logger.debug("Reed-Solomon was successful!")
     # Data packet is never longer than 16 bytes
     data = data[0x00:0x10]
     recipient = str(data[0x00:0x06])
