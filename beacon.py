@@ -3,6 +3,7 @@ from reedsolo import *
 import time
 import os
 import commonfunctions
+from constants import *
 
 def main():
     sniff(iface=iface, prn=sniffmgmt, store=0)
