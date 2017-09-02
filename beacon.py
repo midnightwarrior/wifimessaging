@@ -51,7 +51,7 @@ def sniffmgmt(p):
                                                             sender, pathloss))
 
         commonfunctions.send_packet(sender=recipient_from_packet, recipient=sender_from_packet, rssi=int(measured_rssi), 
-                                    txpower=my_txpower, seqnum=seqnum_from_packet, rs=rs)
+                                    txpower=my_txpower, seqnum=seqnum_from_packet, rs=rs, iface=iface)
 
     except Exception as e:
         logger.debug("That did not work! Error: %s" % e)

@@ -4,7 +4,8 @@ import os
 from scapy.all import *
 from reedsolo import *
 
-def send_packet(recipient='', sender='', rssi=0, txpower=0, seqnum=0, rs=None):
+def send_packet(recipient='', sender='', rssi=0, txpower=0, seqnum=0, rs=None, 
+                iface=None):
   
     response = bytearray()
     response.extend(recipient)
