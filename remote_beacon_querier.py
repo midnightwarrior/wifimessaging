@@ -57,7 +57,7 @@ def sniffmgmt(p):
         
     try:
         data = rs.decode(b)
-        recipient, sender, txpower, rssi_from_packet, seqnum = commonfunctions.decode_packet(data)
+        recipient, sender, txpower, rssi_from_packet, seqnum = commonfunctions.decode_packet(undecoded=data, rs=rs)
     except Exception as e:
         logger.error("Packet decode error: %s" % e)
         logger.error("Packet length: %i" % len(b))
