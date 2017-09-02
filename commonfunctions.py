@@ -15,7 +15,8 @@ def send_packet(recipient='', sender='', rssi=0, txpower=0, seqnum=0, rs=None):
        
     # Apply Reed-Solomon to the data
     rs_data = rs.encode(response)
-    dot11 = Dot11(type=2, subtype=0, addr1=send_mac, addr2=rx_mac)
+    dot11 = Dot11(type=2, subtype=0, addr1="FF:FF:FF:FF:FF:FF", 
+                  addr2="FF:FF:FF:FF:FF:FF")
     frame = RadioTap()/dot11/LLC()/SNAP()/Raw(load=rs_data)
     
     sendp(frame, iface=iface)
