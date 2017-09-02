@@ -48,7 +48,7 @@ def sniffmgmt(p):
         pathloss = int(txpower_from_packet) - measured_rssi
         logger.info("Seqnum %i: RSSI of remote responder according to me is %i dBm" % (seqnum_from_packet, measured_rssi))
         logger.info("Seqnum %i: Pathloss to %s is %i dB" % (seqnum_from_packet, 
-                                                            sender, pathloss))
+                                                            sender_from_packet, pathloss))
 
         commonfunctions.send_packet(sender=recipient_from_packet, recipient=sender_from_packet, rssi=int(measured_rssi), 
                                     txpower=my_txpower, seqnum=seqnum_from_packet, rs=rs, iface=iface)
