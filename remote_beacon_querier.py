@@ -21,7 +21,7 @@ def main():
                        (recipient_callsign, my_callsign, my_txpower, seqnum))
                        
           commonfunctions.send_packet(recipient=recipient_callsign, sender=my_callsign, 
-                                      txpower=my_txpower, seqnum=seqnum)
+                                      txpower=my_txpower, seqnum=seqnum, rs=rs)
 
           sniff(iface=iface, prn=sniffmgmt, store=0, timeout=1)
        
