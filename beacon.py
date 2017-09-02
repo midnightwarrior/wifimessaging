@@ -58,11 +58,5 @@ def sniffmgmt(p):
 
 logger = commonfunctions.setupLogging(LOG_LEVEL="INFO")
 rs = RSCodec(32)
-iface = 'wlan2'
-rx_mac = '22:22:22:22:22:22'
-send_mac = '42:42:42:42:42:42'
-
-my_callsign = 'BEACON'
-my_txpower = 20 # dBm
 
 main()
