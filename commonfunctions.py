@@ -2,6 +2,7 @@ import coloredlogs
 import logging
 import os
 from scapy.all import *
+from reedsolo import *
 
 rs = RSCodec(32)
 
