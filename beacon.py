@@ -57,7 +57,7 @@ def sniffmgmt(p):
         logger.debug("That did not work! Error: %s" % e)
 
 
-logger = commonfunctions.setupLogging(LOG_LEVEL="INFO")
+logger = commonfunctions.setupLogging(LOG_LEVEL=log_level)
 rs = RSCodec(32)
 
 main()

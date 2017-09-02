@@ -89,7 +89,7 @@ def sniffmgmt(p):
                                                         pathloss))
 
 
-logger = commonfunctions.setupLogging(LOG_LEVEL="INFO")
+logger = commonfunctions.setupLogging(LOG_LEVEL=log_level)
 rs = RSCodec(32)
 recipient_callsign = sys.argv[1]
 
